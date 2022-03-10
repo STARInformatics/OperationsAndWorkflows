@@ -33,6 +33,41 @@ def generate_component(op: str):
             },
             "unique": (True if data.get("unique") else False),
             "parameters": data["parameters"],
+            "runner_parameters": {
+                "type": "object",
+                "oneOf": [
+                    {
+                        "properties": {
+                            "allowlist": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                },
+                                "description": "List of operation providers (by title listed on SmartAPI registry) that may be used to complete operation. No others can be used. A full list of operation providers with titles is available through the '/services' endpoint of the workflow runner.",
+                                "example": [
+                                    "ARAX Translator Reasoner"
+                                ],
+                                "minLength": 1
+                            },
+                        }
+                    },
+                    {
+                        "properties": {
+                            "denylist": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                },
+                                "description": "List of operation providers (by title listed on SmartAPI registry) that may not be used to complete operation. All others can be used. A full list of operation providers with titles is available through the '/services' endpoint of the worflow runner.",
+                                "example": [
+                                    "ARAGORN"
+                                ],
+                                "minLength": 1
+                            },
+                        }
+                    },
+                ]
+            }
         },
         "required": [
             "id",
