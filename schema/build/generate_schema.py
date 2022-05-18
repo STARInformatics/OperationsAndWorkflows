@@ -43,9 +43,9 @@ def generate_component(op: str):
                                 "items": {
                                     "type": "string"
                                 },
-                                "description": "List of operation providers (by title listed on SmartAPI registry) that may be used to complete operation. No others can be used. A full list of operation providers with titles is available through the '/services' endpoint of the workflow runner.",
+                                "description": "List of operation providers (by infores ID) that may be used to complete operation. No others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the workflow runner.",
                                 "example": [
-                                    "ARAX Translator Reasoner"
+                                    "infores:aragorn"
                                 ],
                                 "minLength": 1
                             },
@@ -58,9 +58,9 @@ def generate_component(op: str):
                                 "items": {
                                     "type": "string"
                                 },
-                                "description": "List of operation providers (by title listed on SmartAPI registry) that may not be used to complete operation. All others can be used. A full list of operation providers with titles is available through the '/services' endpoint of the worflow runner.",
+                                "description": "List of operation providers (by infores ID) that may not be used to complete operation. All others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the worflow runner.",
                                 "example": [
-                                    "ARAGORN"
+                                    "infores:aragorn"
                                 ],
                                 "minLength": 1
                             },
