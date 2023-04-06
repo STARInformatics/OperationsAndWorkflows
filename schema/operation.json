@@ -94,6 +94,38 @@
         }
     ],
     "$defs": {
+        "AllowList": {
+            "type": "object",
+            "properties": {
+                "allowlist": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "List of operation providers (by infores ID) that may be used to complete operation. No others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the workflow runner.",
+                    "example": [
+                        "infores:aragorn"
+                    ],
+                    "minLength": 1
+                }
+            }
+        },
+        "DenyList": {
+            "type": "object",
+            "properties": {
+                "denylist": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "List of operation providers (by infores ID) that may not be used to complete operation. All others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the worflow runner.",
+                    "example": [
+                        "infores:aragorn"
+                    ],
+                    "minLength": 1
+                }
+            }
+        },
         "OperationAnnotate": {
             "type": "object",
             "description": "This operation adds attributes to knowledge graph elements.",
@@ -109,36 +141,10 @@
                 "runner_parameters": {
                     "oneOf": [
                         {
-                            "type": "object",
-                            "properties": {
-                                "allowlist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may be used to complete operation. No others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the workflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/AllowList"
                         },
                         {
-                            "type": "object",
-                            "properties": {
-                                "denylist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may not be used to complete operation. All others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the worflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/DenyList"
                         }
                     ]
                 }
@@ -177,36 +183,10 @@
                 "runner_parameters": {
                     "oneOf": [
                         {
-                            "type": "object",
-                            "properties": {
-                                "allowlist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may be used to complete operation. No others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the workflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/AllowList"
                         },
                         {
-                            "type": "object",
-                            "properties": {
-                                "denylist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may not be used to complete operation. All others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the worflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/DenyList"
                         }
                     ]
                 }
@@ -245,36 +225,10 @@
                 "runner_parameters": {
                     "oneOf": [
                         {
-                            "type": "object",
-                            "properties": {
-                                "allowlist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may be used to complete operation. No others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the workflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/AllowList"
                         },
                         {
-                            "type": "object",
-                            "properties": {
-                                "denylist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may not be used to complete operation. All others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the worflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/DenyList"
                         }
                     ]
                 }
@@ -299,36 +253,10 @@
                 "runner_parameters": {
                     "oneOf": [
                         {
-                            "type": "object",
-                            "properties": {
-                                "allowlist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may be used to complete operation. No others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the workflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/AllowList"
                         },
                         {
-                            "type": "object",
-                            "properties": {
-                                "denylist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may not be used to complete operation. All others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the worflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/DenyList"
                         }
                     ]
                 }
@@ -353,36 +281,10 @@
                 "runner_parameters": {
                     "oneOf": [
                         {
-                            "type": "object",
-                            "properties": {
-                                "allowlist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may be used to complete operation. No others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the workflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/AllowList"
                         },
                         {
-                            "type": "object",
-                            "properties": {
-                                "denylist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may not be used to complete operation. All others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the worflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/DenyList"
                         }
                     ]
                 }
@@ -429,36 +331,10 @@
                 "runner_parameters": {
                     "oneOf": [
                         {
-                            "type": "object",
-                            "properties": {
-                                "allowlist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may be used to complete operation. No others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the workflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/AllowList"
                         },
                         {
-                            "type": "object",
-                            "properties": {
-                                "denylist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may not be used to complete operation. All others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the worflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/DenyList"
                         }
                     ]
                 }
@@ -539,36 +415,10 @@
                 "runner_parameters": {
                     "oneOf": [
                         {
-                            "type": "object",
-                            "properties": {
-                                "allowlist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may be used to complete operation. No others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the workflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/AllowList"
                         },
                         {
-                            "type": "object",
-                            "properties": {
-                                "denylist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may not be used to complete operation. All others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the worflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/DenyList"
                         }
                     ]
                 }
@@ -593,35 +443,10 @@
                 "runner_parameters": {
                     "oneOf": [
                         {
-                            "type": "object",
-                            "properties": {
-                                "allowlist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may be used to complete operation. No others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the workflow runner.",
-                                    "example": [
-                                        "infores:aragorn"                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/AllowList"
                         },
                         {
-                            "type": "object",
-                            "properties": {
-                                "denylist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may not be used to complete operation. All others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the worflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/DenyList"
                         }
                     ]
                 }
@@ -694,36 +519,10 @@
                 "runner_parameters": {
                     "oneOf": [
                         {
-                            "type": "object",
-                            "properties": {
-                                "allowlist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may be used to complete operation. No others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the workflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/AllowList"
                         },
                         {
-                            "type": "object",
-                            "properties": {
-                                "denylist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may not be used to complete operation. All others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the worflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/DenyList"
                         }
                     ]
                 }
@@ -787,36 +586,10 @@
                 "runner_parameters": {
                     "oneOf": [
                         {
-                            "type": "object",
-                            "properties": {
-                                "allowlist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may be used to complete operation. No others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the workflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/AllowList"
                         },
                         {
-                            "type": "object",
-                            "properties": {
-                                "denylist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may not be used to complete operation. All others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the worflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/DenyList"
                         }
                     ]
                 }
@@ -869,36 +642,10 @@
                 "runner_parameters": {
                     "oneOf": [
                         {
-                            "type": "object",
-                            "properties": {
-                                "allowlist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may be used to complete operation. No others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the workflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/AllowList"
                         },
                         {
-                            "type": "object",
-                            "properties": {
-                                "denylist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may not be used to complete operation. All others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the worflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/DenyList"
                         }
                     ]
                 }
@@ -924,36 +671,10 @@
                 "runner_parameters": {
                     "oneOf": [
                         {
-                            "type": "object",
-                            "properties": {
-                                "allowlist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may be used to complete operation. No others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the workflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/AllowList"
                         },
                         {
-                            "type": "object",
-                            "properties": {
-                                "denylist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may not be used to complete operation. All others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the worflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/DenyList"
                         }
                     ]
                 }
@@ -1028,36 +749,10 @@
                 "runner_parameters": {
                     "oneOf": [
                         {
-                            "type": "object",
-                            "properties": {
-                                "allowlist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may be used to complete operation. No others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the workflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/AllowList"
                         },
                         {
-                            "type": "object",
-                            "properties": {
-                                "denylist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may not be used to complete operation. All others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the worflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/DenyList"
                         }
                     ]
                 }
@@ -1141,36 +836,10 @@
                 "runner_parameters": {
                     "oneOf": [
                         {
-                            "type": "object",
-                            "properties": {
-                                "allowlist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may be used to complete operation. No others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the workflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/AllowList"
                         },
                         {
-                            "type": "object",
-                            "properties": {
-                                "denylist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may not be used to complete operation. All others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the worflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/DenyList"
                         }
                     ]
                 }
@@ -1245,36 +914,10 @@
                 "runner_parameters": {
                     "oneOf": [
                         {
-                            "type": "object",
-                            "properties": {
-                                "allowlist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may be used to complete operation. No others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the workflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/AllowList"
                         },
                         {
-                            "type": "object",
-                            "properties": {
-                                "denylist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may not be used to complete operation. All others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the worflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/DenyList"
                         }
                     ]
                 }
@@ -1300,36 +943,10 @@
                 "runner_parameters": {
                     "oneOf": [
                         {
-                            "type": "object",
-                            "properties": {
-                                "allowlist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may be used to complete operation. No others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the workflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/AllowList"
                         },
                         {
-                            "type": "object",
-                            "properties": {
-                                "denylist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may not be used to complete operation. All others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the worflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/DenyList"
                         }
                     ]
                 }
@@ -1367,36 +984,10 @@
                 "runner_parameters": {
                     "oneOf": [
                         {
-                            "type": "object",
-                            "properties": {
-                                "allowlist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may be used to complete operation. No others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the workflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/AllowList"
                         },
                         {
-                            "type": "object",
-                            "properties": {
-                                "denylist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may not be used to complete operation. All others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the worflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/DenyList"
                         }
                     ]
                 }
@@ -1422,36 +1013,10 @@
                 "runner_parameters": {
                     "oneOf": [
                         {
-                            "type": "object",
-                            "properties": {
-                                "allowlist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may be used to complete operation. No others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the workflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/AllowList"
                         },
                         {
-                            "type": "object",
-                            "properties": {
-                                "denylist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may not be used to complete operation. All others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the worflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/DenyList"
                         }
                     ]
                 }
@@ -1476,36 +1041,10 @@
                 "runner_parameters": {
                     "oneOf": [
                         {
-                            "type": "object",
-                            "properties": {
-                                "allowlist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may be used to complete operation. No others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the workflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/AllowList"
                         },
                         {
-                            "type": "object",
-                            "properties": {
-                                "denylist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may not be used to complete operation. All others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the worflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/DenyList"
                         }
                     ]
                 }
@@ -1530,36 +1069,10 @@
                 "runner_parameters": {
                     "oneOf": [
                         {
-                            "type": "object",
-                            "properties": {
-                                "allowlist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may be used to complete operation. No others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the workflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/AllowList"
                         },
                         {
-                            "type": "object",
-                            "properties": {
-                                "denylist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may not be used to complete operation. All others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the worflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/DenyList"
                         }
                     ]
                 }
@@ -1614,36 +1127,10 @@
                 "runner_parameters": {
                     "oneOf": [
                         {
-                            "type": "object",
-                            "properties": {
-                                "allowlist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may be used to complete operation. No others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the workflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/AllowList"
                         },
                         {
-                            "type": "object",
-                            "properties": {
-                                "denylist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may not be used to complete operation. All others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the worflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/DenyList"
                         }
                     ]
                 }
@@ -1693,36 +1180,10 @@
                 "runner_parameters": {
                     "oneOf": [
                         {
-                            "type": "object",
-                            "properties": {
-                                "allowlist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may be used to complete operation. No others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the workflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/AllowList"
                         },
                         {
-                            "type": "object",
-                            "properties": {
-                                "denylist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may not be used to complete operation. All others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the worflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/DenyList"
                         }
                     ]
                 }
@@ -1748,36 +1209,10 @@
                 "runner_parameters": {
                     "oneOf": [
                         {
-                            "type": "object",
-                            "properties": {
-                                "allowlist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may be used to complete operation. No others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the workflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/AllowList"
                         },
                         {
-                            "type": "object",
-                            "properties": {
-                                "denylist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may not be used to complete operation. All others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the worflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/DenyList"
                         }
                     ]
                 }
@@ -1831,36 +1266,10 @@
                 "runner_parameters": {
                     "oneOf": [
                         {
-                            "type": "object",
-                            "properties": {
-                                "allowlist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may be used to complete operation. No others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the workflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/AllowList"
                         },
                         {
-                            "type": "object",
-                            "properties": {
-                                "denylist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may not be used to complete operation. All others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the worflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/DenyList"
                         }
                     ]
                 }
@@ -1886,36 +1295,10 @@
                 "runner_parameters": {
                     "oneOf": [
                         {
-                            "type": "object",
-                            "properties": {
-                                "allowlist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may be used to complete operation. No others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the workflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/AllowList"
                         },
                         {
-                            "type": "object",
-                            "properties": {
-                                "denylist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may not be used to complete operation. All others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the worflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/DenyList"
                         }
                     ]
                 }
@@ -1940,36 +1323,10 @@
                 "runner_parameters": {
                     "oneOf": [
                         {
-                            "type": "object",
-                            "properties": {
-                                "allowlist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may be used to complete operation. No others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the workflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/AllowList"
                         },
                         {
-                            "type": "object",
-                            "properties": {
-                                "denylist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may not be used to complete operation. All others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the worflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/DenyList"
                         }
                     ]
                 }
@@ -1994,36 +1351,10 @@
                 "runner_parameters": {
                     "oneOf": [
                         {
-                            "type": "object",
-                            "properties": {
-                                "allowlist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may be used to complete operation. No others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the workflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/AllowList"
                         },
                         {
-                            "type": "object",
-                            "properties": {
-                                "denylist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may not be used to complete operation. All others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the worflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/DenyList"
                         }
                     ]
                 }
@@ -2079,36 +1410,10 @@
                 "runner_parameters": {
                     "oneOf": [
                         {
-                            "type": "object",
-                            "properties": {
-                                "allowlist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may be used to complete operation. No others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the workflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/AllowList"
                         },
                         {
-                            "type": "object",
-                            "properties": {
-                                "denylist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may not be used to complete operation. All others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the worflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/DenyList"
                         }
                     ]
                 }
@@ -2165,36 +1470,10 @@
                 "runner_parameters": {
                     "oneOf": [
                         {
-                            "type": "object",
-                            "properties": {
-                                "allowlist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may be used to complete operation. No others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the workflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/AllowList"
                         },
                         {
-                            "type": "object",
-                            "properties": {
-                                "denylist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may not be used to complete operation. All others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the worflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/DenyList"
                         }
                     ]
                 }
@@ -2235,36 +1514,10 @@
                 "runner_parameters": {
                     "oneOf": [
                         {
-                            "type": "object",
-                            "properties": {
-                                "allowlist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may be used to complete operation. No others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the workflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/AllowList"
                         },
                         {
-                            "type": "object",
-                            "properties": {
-                                "denylist": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "description": "List of operation providers (by infores ID) that may not be used to complete operation. All others will be used. A full list of operation providers for each operation with infores ID's is available through the '/services' endpoint of the worflow runner.",
-                                    "example": [
-                                        "infores:aragorn"
-                                    ],
-                                    "minLength": 1
-                                }
-                            }
+                            "$ref": "#/$defs/DenyList"
                         }
                     ]
                 }
