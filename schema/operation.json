@@ -126,6 +126,16 @@
                 }
             }
         },
+        "RunnerParameters": {
+            "oneOf": [
+                {
+                    "$ref": "#/$defs/AllowList"
+                },
+                {
+                    "$ref": "#/$defs/DenyList"
+                }
+            ]
+        },
         "OperationAnnotate": {
             "type": "object",
             "description": "This operation adds attributes to knowledge graph elements.",
@@ -138,16 +148,7 @@
                 },
                 "unique": true,
                 "parameters": {},
-                "runner_parameters": {
-                    "oneOf": [
-                        {
-                            "$ref": "#/$defs/AllowList"
-                        },
-                        {
-                            "$ref": "#/$defs/DenyList"
-                        }
-                    ]
-                }
+                "runner_parameters": { "$ref": "#/$defs/RunnerParameters" }
             },
             "required": [
                 "id"
@@ -180,16 +181,7 @@
                         }
                     }
                 },
-                "runner_parameters": {
-                    "oneOf": [
-                        {
-                            "$ref": "#/$defs/AllowList"
-                        },
-                        {
-                            "$ref": "#/$defs/DenyList"
-                        }
-                    ]
-                }
+                "runner_parameters": { "$ref": "#/$defs/RunnerParameters" }
             },
             "required": [
                 "id"
@@ -222,16 +214,7 @@
                         }
                     }
                 },
-                "runner_parameters": {
-                    "oneOf": [
-                        {
-                            "$ref": "#/$defs/AllowList"
-                        },
-                        {
-                            "$ref": "#/$defs/DenyList"
-                        }
-                    ]
-                }
+                "runner_parameters": { "$ref": "#/$defs/RunnerParameters" }
             },
             "required": [
                 "id"
@@ -250,16 +233,7 @@
                 },
                 "unique": false,
                 "parameters": {},
-                "runner_parameters": {
-                    "oneOf": [
-                        {
-                            "$ref": "#/$defs/AllowList"
-                        },
-                        {
-                            "$ref": "#/$defs/DenyList"
-                        }
-                    ]
-                }
+                "runner_parameters": { "$ref": "#/$defs/RunnerParameters" }
             },
             "required": [
                 "id"
@@ -278,16 +252,7 @@
                 },
                 "unique": false,
                 "parameters": {},
-                "runner_parameters": {
-                    "oneOf": [
-                        {
-                            "$ref": "#/$defs/AllowList"
-                        },
-                        {
-                            "$ref": "#/$defs/DenyList"
-                        }
-                    ]
-                }
+                "runner_parameters": { "$ref": "#/$defs/RunnerParameters" }
             },
             "required": [
                 "id"
@@ -328,16 +293,7 @@
                         }
                     }
                 },
-                "runner_parameters": {
-                    "oneOf": [
-                        {
-                            "$ref": "#/$defs/AllowList"
-                        },
-                        {
-                            "$ref": "#/$defs/DenyList"
-                        }
-                    ]
-                }
+                "runner_parameters": { "$ref": "#/$defs/RunnerParameters" }
             },
             "required": [
                 "id"
@@ -412,16 +368,7 @@
                         }
                     ]
                 },
-                "runner_parameters": {
-                    "oneOf": [
-                        {
-                            "$ref": "#/$defs/AllowList"
-                        },
-                        {
-                            "$ref": "#/$defs/DenyList"
-                        }
-                    ]
-                }
+                "runner_parameters": { "$ref": "#/$defs/RunnerParameters" }
             },
             "required": [
                 "id"
@@ -440,16 +387,7 @@
                 },
                 "unique": false,
                 "parameters": {},
-                "runner_parameters": {
-                    "oneOf": [
-                        {
-                            "$ref": "#/$defs/AllowList"
-                        },
-                        {
-                            "$ref": "#/$defs/DenyList"
-                        }
-                    ]
-                }
+                "runner_parameters": { "$ref": "#/$defs/RunnerParameters" }
             },
             "required": [
                 "id"
@@ -516,16 +454,7 @@
                         "remove_above_or_below"
                     ]
                 },
-                "runner_parameters": {
-                    "oneOf": [
-                        {
-                            "$ref": "#/$defs/AllowList"
-                        },
-                        {
-                            "$ref": "#/$defs/DenyList"
-                        }
-                    ]
-                }
+                "runner_parameters": { "$ref": "#/$defs/RunnerParameters" }
             },
             "required": [
                 "id",
@@ -583,16 +512,7 @@
                         "remove_value"
                     ]
                 },
-                "runner_parameters": {
-                    "oneOf": [
-                        {
-                            "$ref": "#/$defs/AllowList"
-                        },
-                        {
-                            "$ref": "#/$defs/DenyList"
-                        }
-                    ]
-                }
+                "runner_parameters": { "$ref": "#/$defs/RunnerParameters" }
             },
             "required": [
                 "id",
@@ -639,16 +559,7 @@
                         "remove_value"
                     ]
                 },
-                "runner_parameters": {
-                    "oneOf": [
-                        {
-                            "$ref": "#/$defs/AllowList"
-                        },
-                        {
-                            "$ref": "#/$defs/DenyList"
-                        }
-                    ]
-                }
+                "runner_parameters": { "$ref": "#/$defs/RunnerParameters" }
             },
             "required": [
                 "id",
@@ -668,16 +579,7 @@
                 },
                 "unique": false,
                 "parameters": {},
-                "runner_parameters": {
-                    "oneOf": [
-                        {
-                            "$ref": "#/$defs/AllowList"
-                        },
-                        {
-                            "$ref": "#/$defs/DenyList"
-                        }
-                    ]
-                }
+                "runner_parameters": { "$ref": "#/$defs/RunnerParameters" }
             },
             "required": [
                 "id"
@@ -746,16 +648,7 @@
                         "edge_attribute"
                     ]
                 },
-                "runner_parameters": {
-                    "oneOf": [
-                        {
-                            "$ref": "#/$defs/AllowList"
-                        },
-                        {
-                            "$ref": "#/$defs/DenyList"
-                        }
-                    ]
-                }
+                "runner_parameters": { "$ref": "#/$defs/RunnerParameters" }
             },
             "required": [
                 "id",
@@ -833,16 +726,7 @@
                         "edge_attribute"
                     ]
                 },
-                "runner_parameters": {
-                    "oneOf": [
-                        {
-                            "$ref": "#/$defs/AllowList"
-                        },
-                        {
-                            "$ref": "#/$defs/DenyList"
-                        }
-                    ]
-                }
+                "runner_parameters": { "$ref": "#/$defs/RunnerParameters" }
             },
             "required": [
                 "id",
@@ -911,16 +795,7 @@
                         "edge_attribute"
                     ]
                 },
-                "runner_parameters": {
-                    "oneOf": [
-                        {
-                            "$ref": "#/$defs/AllowList"
-                        },
-                        {
-                            "$ref": "#/$defs/DenyList"
-                        }
-                    ]
-                }
+                "runner_parameters": { "$ref": "#/$defs/RunnerParameters" }
             },
             "required": [
                 "id",
@@ -940,16 +815,7 @@
                 },
                 "unique": false,
                 "parameters": {},
-                "runner_parameters": {
-                    "oneOf": [
-                        {
-                            "$ref": "#/$defs/AllowList"
-                        },
-                        {
-                            "$ref": "#/$defs/DenyList"
-                        }
-                    ]
-                }
+                "runner_parameters": { "$ref": "#/$defs/RunnerParameters" }
             },
             "required": [
                 "id"
@@ -981,16 +847,7 @@
                         "max_results"
                     ]
                 },
-                "runner_parameters": {
-                    "oneOf": [
-                        {
-                            "$ref": "#/$defs/AllowList"
-                        },
-                        {
-                            "$ref": "#/$defs/DenyList"
-                        }
-                    ]
-                }
+                "runner_parameters": { "$ref": "#/$defs/RunnerParameters" }
             },
             "required": [
                 "id",
@@ -1010,16 +867,7 @@
                 },
                 "unique": true,
                 "parameters": {},
-                "runner_parameters": {
-                    "oneOf": [
-                        {
-                            "$ref": "#/$defs/AllowList"
-                        },
-                        {
-                            "$ref": "#/$defs/DenyList"
-                        }
-                    ]
-                }
+                "runner_parameters": { "$ref": "#/$defs/RunnerParameters" }
             },
             "required": [
                 "id"
@@ -1038,16 +886,7 @@
                 },
                 "unique": true,
                 "parameters": {},
-                "runner_parameters": {
-                    "oneOf": [
-                        {
-                            "$ref": "#/$defs/AllowList"
-                        },
-                        {
-                            "$ref": "#/$defs/DenyList"
-                        }
-                    ]
-                }
+                "runner_parameters": { "$ref": "#/$defs/RunnerParameters" }
             },
             "required": [
                 "id"
@@ -1066,16 +905,7 @@
                 },
                 "unique": false,
                 "parameters": {},
-                "runner_parameters": {
-                    "oneOf": [
-                        {
-                            "$ref": "#/$defs/AllowList"
-                        },
-                        {
-                            "$ref": "#/$defs/DenyList"
-                        }
-                    ]
-                }
+                "runner_parameters": { "$ref": "#/$defs/RunnerParameters" }
             },
             "required": [
                 "id"
@@ -1124,16 +954,7 @@
                         "virtual_relation_label"
                     ]
                 },
-                "runner_parameters": {
-                    "oneOf": [
-                        {
-                            "$ref": "#/$defs/AllowList"
-                        },
-                        {
-                            "$ref": "#/$defs/DenyList"
-                        }
-                    ]
-                }
+                "runner_parameters": { "$ref": "#/$defs/RunnerParameters" }
             },
             "required": [
                 "id",
@@ -1177,16 +998,7 @@
                         "qnode_keys"
                     ]
                 },
-                "runner_parameters": {
-                    "oneOf": [
-                        {
-                            "$ref": "#/$defs/AllowList"
-                        },
-                        {
-                            "$ref": "#/$defs/DenyList"
-                        }
-                    ]
-                }
+                "runner_parameters": { "$ref": "#/$defs/RunnerParameters" }
             },
             "required": [
                 "id",
@@ -1206,16 +1018,7 @@
                 },
                 "unique": false,
                 "parameters": {},
-                "runner_parameters": {
-                    "oneOf": [
-                        {
-                            "$ref": "#/$defs/AllowList"
-                        },
-                        {
-                            "$ref": "#/$defs/DenyList"
-                        }
-                    ]
-                }
+                "runner_parameters": { "$ref": "#/$defs/RunnerParameters" }
             },
             "required": [
                 "id"
@@ -1263,16 +1066,7 @@
                         "virtual_relation_label"
                     ]
                 },
-                "runner_parameters": {
-                    "oneOf": [
-                        {
-                            "$ref": "#/$defs/AllowList"
-                        },
-                        {
-                            "$ref": "#/$defs/DenyList"
-                        }
-                    ]
-                }
+                "runner_parameters": { "$ref": "#/$defs/RunnerParameters" }
             },
             "required": [
                 "id",
@@ -1292,16 +1086,7 @@
                 },
                 "unique": true,
                 "parameters": {},
-                "runner_parameters": {
-                    "oneOf": [
-                        {
-                            "$ref": "#/$defs/AllowList"
-                        },
-                        {
-                            "$ref": "#/$defs/DenyList"
-                        }
-                    ]
-                }
+                "runner_parameters": { "$ref": "#/$defs/RunnerParameters" }
             },
             "required": [
                 "id"
@@ -1320,16 +1105,7 @@
                 },
                 "unique": true,
                 "parameters": {},
-                "runner_parameters": {
-                    "oneOf": [
-                        {
-                            "$ref": "#/$defs/AllowList"
-                        },
-                        {
-                            "$ref": "#/$defs/DenyList"
-                        }
-                    ]
-                }
+                "runner_parameters": { "$ref": "#/$defs/RunnerParameters" }
             },
             "required": [
                 "id"
@@ -1348,16 +1124,7 @@
                 },
                 "unique": false,
                 "parameters": {},
-                "runner_parameters": {
-                    "oneOf": [
-                        {
-                            "$ref": "#/$defs/AllowList"
-                        },
-                        {
-                            "$ref": "#/$defs/DenyList"
-                        }
-                    ]
-                }
+                "runner_parameters": { "$ref": "#/$defs/RunnerParameters" }
             },
             "required": [
                 "id"
@@ -1407,16 +1174,7 @@
                         "ascending_or_descending"
                     ]
                 },
-                "runner_parameters": {
-                    "oneOf": [
-                        {
-                            "$ref": "#/$defs/AllowList"
-                        },
-                        {
-                            "$ref": "#/$defs/DenyList"
-                        }
-                    ]
-                }
+                "runner_parameters": { "$ref": "#/$defs/RunnerParameters" }
             },
             "required": [
                 "id",
@@ -1467,16 +1225,7 @@
                         "ascending_or_descending"
                     ]
                 },
-                "runner_parameters": {
-                    "oneOf": [
-                        {
-                            "$ref": "#/$defs/AllowList"
-                        },
-                        {
-                            "$ref": "#/$defs/DenyList"
-                        }
-                    ]
-                }
+                "runner_parameters": { "$ref": "#/$defs/RunnerParameters" }
             },
             "required": [
                 "id",
@@ -1511,16 +1260,7 @@
                         "ascending_or_descending"
                     ]
                 },
-                "runner_parameters": {
-                    "oneOf": [
-                        {
-                            "$ref": "#/$defs/AllowList"
-                        },
-                        {
-                            "$ref": "#/$defs/DenyList"
-                        }
-                    ]
-                }
+                "runner_parameters": { "$ref": "#/$defs/RunnerParameters" }
             },
             "required": [
                 "id",
