@@ -136,6 +136,14 @@
                 }
             ]
         },
+        "AscendingOrDescending": {
+            "description": "Indicates whether results should be sorted in ascending or descending order.",
+            "type": "string",
+            "enum": [
+                "ascending",
+                "descending"
+            ]
+        },
         "OperationAnnotate": {
             "type": "object",
             "description": "This operation adds attributes to knowledge graph elements.",
@@ -1150,14 +1158,7 @@
                             "type": "string",
                             "example": "normalized_google_distance"
                         },
-                        "ascending_or_descending": {
-                            "description": "Indicates whether results should be sorted in ascending or descending order.",
-                            "type": "string",
-                            "enum": [
-                                "ascending",
-                                "descending"
-                            ]
-                        },
+                        "ascending_or_descending": { "$ref": "#/$defs/AscendingOrDescending" },
                         "qedge_keys": {
                             "description": "This indicates if you only want to consider edges with specific edge_keys. If not provided or empty, all edges will be looked at.",
                             "type": "array",
@@ -1201,14 +1202,7 @@
                             "type": "string",
                             "example": "normalized_google_distance"
                         },
-                        "ascending_or_descending": {
-                            "description": "Indicates whether results should be sorted in ascending or descending order.",
-                            "type": "string",
-                            "enum": [
-                                "ascending",
-                                "descending"
-                            ]
-                        },
+                        "ascending_or_descending": { "$ref": "#/$defs/AscendingOrDescending" },
                         "qnode_keys": {
                             "description": "This indicates if you only want to consider nodes with specific node_keys. If not provided or empty, all nodes will be looked at.",
                             "type": "array",
@@ -1247,14 +1241,7 @@
                 "parameters": {
                     "type": "object",
                     "properties": {
-                        "ascending_or_descending": {
-                            "description": "Indicates whether results should be sorted in ascending or descending order.",
-                            "type": "string",
-                            "enum": [
-                                "ascending",
-                                "descending"
-                            ]
-                        }
+                        "ascending_or_descending": { "$ref": "#/$defs/AscendingOrDescending" }
                     },
                     "required": [
                         "ascending_or_descending"
